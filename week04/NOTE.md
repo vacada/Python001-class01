@@ -1,1 +1,41 @@
-学习笔记
+# week04学习笔记
+
+## pandas
+- 基本的数据类型
+	- Series(类似excel的单一列)
+	- Dataframe(类似excel的多行和多列)
+- 数据读取
+	- 支持的类型
+		- excel
+			- 需导入 xlrd
+			- pd.read_excl()
+		- csv
+			- pd.read_csv()
+		- sql
+			- 需导入 pymysql
+			- pd.read_sql()
+		- table
+			- pa.read_table()
+- 数据预处理
+	- dropna() 删除一整行数据
+	- info（） 获取空值
+	- ffill() 上一行数据填充
+	- ffill(axis=1) 前一列数据填充
+	- fillna() 空值填充为指定值
+	- drop_duplicates() 去重（完全重复）
+- pandas输出和绘图
+	- 输出
+		- to_excel() 输出excel阅读性好
+		- to_csv()
+		- to_pickle() 性能为excel的10倍以上
+		- to_dict() 转为字典
+	- 绘图
+		- from matlpotlib.pyplot import as plt
+		- import seabornas sns
+- 分词
+	- import jieba 分词
+	- import jieba.analyse 提取关键词
+		- jieba.analyse.extract_tags() 基于TF-IDF算法
+		- jieba.analyse.textrank() 基于TextRank算法
+	- from snownlp import SnowNLP 中文分词+语义分析
+
