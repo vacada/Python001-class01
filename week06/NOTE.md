@@ -45,3 +45,19 @@
 			运行 python manage.py makemigrations 为模型的改变生成迁移文件
 			运行 python manage.py migrate 来应用数据库迁移
 
++ 反向生成models
+		python manage.py inspectdb
+
++ 常见问题
+	+ 报错：django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module: No module named 'MySQLdb'
+			解决方案，在 init.py 文件中添加以下代码即可：
+			import pymysql
+			pymysql.install_as_MySQLdb()
+	+ 报错：AttributeError: 'str' object has no attribute 'decode'
+			解决方案：可以根据错误提示找到文件位置，打开 operations.py 文件，注释掉下面代码：
+			if query is not None:
+			query = query.decode(errors='replace')
+	+ 报错：UnicodeDecodeError: 'gbk' codec can't decode byte 0xa6 in position 9737: illegal multibyte sequence
+			解决方案：
+			打开django/views下的debug.py文件，转到line331行
+			更新为with Path(CURRENT_DIR, 'templates', 'technical_500.html').open(encoding="utf-8") as fh:

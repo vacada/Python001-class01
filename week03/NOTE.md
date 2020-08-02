@@ -60,4 +60,4 @@
 	+ 报错：UnicodeDecodeError: 'gbk' codec can't decode byte 0xa6 in position 9737: illegal multibyte sequence
 			解决方案：
 			打开django/views下的debug.py文件，转到line331行
-			更新为with Path(CURRENT_DIR, 'templates', 'technical_500.html').open(encoding="utf-8") as fh
+			更新为with Path(CURRENT_DIR, 'templates', 'technical_500.html').open(encoding="utf-8") as fh:
