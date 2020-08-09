@@ -12,6 +12,7 @@ __mtime__:2020/8/9
 
 from abc import ABCMeta, abstractmethod
 
+
 class Zoo(object):
     # zoo = list()
     def __init__(self, name):
@@ -44,7 +45,6 @@ class Animal(metaclass=ABCMeta):
     @abstractmethod
     def is_pet(self):
         pass
-
 
 
 class Cat(Animal):
