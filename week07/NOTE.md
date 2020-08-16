@@ -61,5 +61,5 @@
 		这个方法用于检查obj是否有一个名为attr的值的属性，返回一个布尔值
 	+ getattr(obj, attr):
 		调用这个方法将返回obj中名为attr值的属性的值
-	+ etattr(obj, attr, val):
+	+ setattr(obj, attr, val):
 		调用这个方法将给obj的名为attr的值的属性赋值为val
