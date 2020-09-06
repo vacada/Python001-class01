@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.doubanio.com/simple/"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+scrapy = "*"
+fake-useragent = "*"
+pandas = "*"
+pymysql = "*"
+snownlp = "*"
+django = "==2.2"
+mysqlclient = "*"
+
+[requires]
+python_version = "3.7"
